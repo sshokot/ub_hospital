@@ -83,7 +83,7 @@ class DiseaseType(models.Model):
            patient = self.env['hospital.patient'].sudo().create(patient_vals)
        visit_vals = {'patient_id': patient.id, 'state': 'plan', 'date': self.get_plan_visit_date()}
        new_visit = self.env['hospital.visit'].sudo().create(visit_vals)
-       
+
        return {'success': True, 'visit_id': new_visit.id, 'visit_date': new_visit.date.strftime('%Y-%m-%d')}
 
 
