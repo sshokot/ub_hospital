@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo> 
+  <data noupdate="1">
+    <record id="disease_type_avitominosis" model="disease.type">
+        <field name="name">Avitominosis</field>
+    </record>
+    <record id="disease_type_allergy" model="disease.type">
+        <field name="name">Allergy</field>
+    </record>
+    <record id="disease_type_flue" model="disease.type">
+        <field name="name">Flue</field>
+    </record>
+    <record id="doctor_therapist_js" model="hospital.doctor">
+        <field name="name">James Smith</field>
+        <field name="specialization">Therapist</field>
+    </record>
+    <record id="doctor_allergist_kt" model="hospital.doctor">
+        <field name="name">Kate Trump</field>  
+        <field name="specialization">Allergist</field>
+    </record>
+    <record id="doctor_therapist_sr" model="hospital.doctor">
+        <field name="name">Sven Rudy</field>
+        <field name="specialization">Therapist</field>
+    </record>
+    <record id="patient_1" model="hospital.patient">
+        <field name="name">July Cran</field>
+        <field name="attending_doctor" ref="ub_hospital.doctor_therapist_js" />
+    </record>
+    <record id="patient_2" model="hospital.patient">
+        <field name="name">Scott Ramsy</field>
+        <field name="attending_doctor" ref="ub_hospital.doctor_therapist_sr" />
+    </record>
+    <record id="patient_3" model="hospital.patient">
+        <field name="name">Jane Kost</field>
+        <field name="attending_doctor" ref="ub_hospital.doctor_allergist_kt" />
+    </record>
+  </data>
+</odoo>

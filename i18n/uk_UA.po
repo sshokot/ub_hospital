@@ -1,0 +1,256 @@
+# Translation of Odoo Server. This file contains the translation of the following modules:
+# 	* ub_hospital
+#
+msgid "" 
+msgstr "" 
+"Project-Id-Version: Odoo Server 16.0\n" 
+"Report-Msgid-Bugs-To: \n" 
+"POT-Creation-Date: 2023-03-15 08:46+0000\n" 
+"PO-Revision-Date: 2023-03-15 08:46+0000\n" 
+"Last-Translator: \n" 
+"Language-Team: \n" 
+"Language: uk\n"
+"MIME-Version: 1.0\n" 
+"Content-Type: text/plain; charset=UTF-8\n" 
+"Content-Transfer-Encoding: \n" 
+"Plural-Forms: \n"
+
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__attending_doctor
+msgid "Attending doctor"
+msgstr "Спостерігаючий лікар"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__complaint 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__complaint 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_visit_form
+msgid "Complaints" 
+msgstr "Скарги"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type__create_uid 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__create_uid 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__create_uid 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__create_uid
+msgid "Created by" 
+msgstr "Створено"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type__create_date 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__create_date 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__create_date 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__create_date
+msgid "Created on" 
+msgstr "Створено"
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.disease_type_form
+msgid "Disease" 
+msgstr "Хвороба"
+#. module: ub_hospital
+#: model:ir.model,name:ub_hospital.model_disease_type
+msgid "Disease type" 
+msgstr "Хвороба"
+#. module: ub_hospital
+#: model:ir.actions.act_window,name:ub_hospital.disease_type_act_window model:ir.ui.menu,name:ub_hospital.disease_type_menu
+msgid "Diseases" 
+msgstr "Хвороби"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type__display_name 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__display_name 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__display_name 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_report__display_name 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__display_name
+msgid "Display Name" 
+msgstr "Ім'я"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_report__doctor_id 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__doctor_id 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_doctor_form 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_report_view_search
+msgid "Doctor" 
+msgstr "Лікар"
+#. module: ub_hospital
+#: model:ir.actions.act_window,name:ub_hospital.hospital_doctor_act_window model:ir.ui.menu,name:ub_hospital.hospital_doctor_menu
+msgid "Doctors" 
+msgstr "Лікарі"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__email 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__email
+msgid "Email" 
+msgstr "Email"
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_report_view_search
+msgid "Group By" 
+msgstr "Згруппувати"
+#. module: ub_hospital
+#: model:ir.model.fields.selection,name:ub_hospital.selection__hospital_visit__state__happen
+msgid "Happen" 
+msgstr "Відбувся"
+#. module: ub_hospital
+#: model:ir.ui.menu,name:ub_hospital.hospital_base_menu
+msgid "Hospital" 
+msgstr "Лякарня"
+#. module: ub_hospital
+#: model:ir.model,name:ub_hospital.model_hospital_doctor
+msgid "Hospital Doctor" 
+msgstr "Лікар"
+#. module: ub_hospital
+#: model:ir.actions.act_window,name:ub_hospital.report_hospital_patient_visit_action 
+#: model:ir.ui.menu,name:ub_hospital.report_patient_visit_menu 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_report_view_search 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.patient_visit_report_view_pivot 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.patient_visit_report_view_tree
+msgid "Hospital Visit Analysis" 
+msgstr "Аналіз візитів до лікарні"
+#. module: ub_hospital
+#: model:ir.model,name:ub_hospital.model_hospital_patient
+msgid "Hospital patient" 
+msgstr "Паціент"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type__id 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__id 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__id 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_report__id 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__id
+msgid "ID" 
+msgstr ""
+#. module: ub_hospital
+#: model:ir.model.fields.selection,name:ub_hospital.selection__hospital_visit__state__in_action
+msgid "In action" 
+msgstr "Відбувається"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type____last_update 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor____last_update 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient____last_update 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_report____last_update 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit____last_update
+msgid "Last Modified on" 
+msgstr ""
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type__write_uid 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__write_uid 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__write_uid 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__write_uid
+msgid "Last Updated by" 
+msgstr ""
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type__write_date 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__write_date 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__write_date 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__write_date
+msgid "Last Updated on" 
+msgstr ""
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type__name 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__name 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__name
+msgid "Name" 
+msgstr "ФІО"
+#. module: ub_hospital
+#: model:ir.model,name:ub_hospital.model_hospital_report
+msgid "Pacient Visits Report" 
+msgstr "Звіт по візитам пацієнта"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_report__patient_id 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__patient_id 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_patient_form 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_report_view_search
+msgid "Patient" 
+msgstr ""
+#. module: ub_hospital
+#: model:ir.model,name:ub_hospital.model_hospital_visit
+msgid "Patient Visit" 
+msgstr "Візит пацієнта"
+#. module: ub_hospital
+#: model:ir.actions.act_window,name:ub_hospital.hospital_visit_act_window model:ir.ui.menu,name:ub_hospital.hospital_visit_menu
+msgid "Patient visits" 
+msgstr "Візити паціентів"
+#. module: ub_hospital
+#: model:ir.actions.act_window,name:ub_hospital.hospital_patient_act_window model:ir.ui.menu,name:ub_hospital.hospital_patient_menu
+msgid "Patients" 
+msgstr "Пацієнти"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__phone 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__phone
+msgid "Phone" 
+msgstr "Телефон"
+#. module: ub_hospital
+#: model:ir.model.fields.selection,name:ub_hospital.selection__hospital_visit__state__plan
+msgid "Planned" 
+msgstr "Запланован"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_report__visit_qty
+msgid "Qty" 
+msgstr "Кількість"
+#. module: ub_hospital
+#: model:ir.ui.menu,name:ub_hospital.hospital_reporting_menu
+msgid "Reporting" 
+msgstr "Звітність"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_doctor__specialization
+msgid "Specialization" 
+msgstr "Спеціалізація"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__state
+msgid "State" 
+msgstr "Статус"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type__symptoms 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.disease_type_form
+msgid "Symptoms" 
+msgstr ""
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_disease_type__treatment
+msgid "Treatment" 
+msgstr "Лікування"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_patient__treatment 
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__treatment 
+#: model_terms:ir.ui.view,arch_db:ub_hospital.disease_type_form model_terms:ir.ui.view,arch_db:ub_hospital.hospital_visit_form
+msgid "Treatments" 
+msgstr "Лікування"
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_visit_form
+msgid "Visit" 
+msgstr "Візит"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_report__visit_id
+msgid "Visit #" 
+msgstr "Візит №"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_report__date
+msgid "Visit Date" 
+msgstr "Дата візиту"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_report__visit_state
+msgid "Visit State" 
+msgstr "Статус візиту"
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_report_view_search
+msgid "Visit Status" 
+msgstr "Статуси візиту"
+#. module: ub_hospital
+#: model:ir.model.fields,field_description:ub_hospital.field_hospital_visit__date
+msgid "Visit date/time" 
+msgstr "Дата / час візиту"
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_patient_form
+msgid "attending doctor" 
+msgstr "Спостерігаючий лікар"
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.disease_type_form model_terms:ir.ui.view,arch_db:ub_hospital.hospital_visit_form
+msgid "e.g. Aspirin" 
+msgstr "Аспрірин"
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.disease_type_form
+msgid "e.g. Flue" 
+msgstr "Грип"
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_doctor_form model_terms:ir.ui.view,arch_db:ub_hospital.hospital_patient_form
+msgid "e.g. John Doe" 
+msgstr ""
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.disease_type_form model_terms:ir.ui.view,arch_db:ub_hospital.hospital_visit_form
+msgid "e.g. headache" 
+msgstr "Головний біль"
+#. module: ub_hospital
+#: model_terms:ir.ui.view,arch_db:ub_hospital.hospital_doctor_form
+msgid "e.g. therapist" 
+msgstr "Терапевт"

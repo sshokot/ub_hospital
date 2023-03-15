@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="hospital_doctor_act_window" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="res_model">hospital.doctor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="hospital_patient_act_window" model="ir.actions.act_window">
+        <field name="name">Patients</field>
+        <field name="res_model">hospital.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="disease_type_act_window" model="ir.actions.act_window">
+        <field name="name">Diseases</field>
+        <field name="res_model">disease.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="hospital_visit_act_window" model="ir.actions.act_window">
+        <field name="name">Patient visits</field>
+        <field name="res_model">hospital.visit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="hospital_base_menu" name="Hospital"/>
+
+    <menuitem id="hospital_visit_menu" parent="hospital_base_menu" sequence="10" action="hospital_visit_act_window"/>
+    <menuitem id="hospital_doctor_menu" parent="hospital_base_menu" sequence="20" action="hospital_doctor_act_window"/>
+    <menuitem id="hospital_patient_menu" parent="hospital_base_menu" sequence="30" action="hospital_patient_act_window"/>
+    <menuitem id="disease_type_menu" parent="hospital_base_menu" sequence="40" action="disease_type_act_window"/> 
+
+    <record id="hospital_doctor_tree" model="ir.ui.view">
+            <field name="name">hospital.doctor.tree</field>
+            <field name="model">hospital.doctor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="specialization" />
+                    <field name="phone" />
+                    <field name="email" />
+                </tree>
+            </field>   
+    </record>
+
+    <record id="hospital_doctor_form" model="ir.ui.view">
+            <field name="name">hospital.doctor.form</field>
+            <field name="model">hospital.doctor</field>
+            <field name="arch" type="xml">
+                <form string="Doctor">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name" placeholder="e.g. John Doe" required="1"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="email" />
+                            </group>
+                            <group name="phone_numbers">
+                                <field name="phone" widget="phone" />
+                            </group>                       
+                            <field name="specialization" placeholder="e.g. therapist"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record id="hospital_patient_tree" model="ir.ui.view">
+            <field name="name">hospital.patient.tree</field>
+            <field name="model">hospital.patient</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="attending_doctor" />
+                    <field name="phone" />
+                    <field name="email" />
+                </tree>
+            </field>
+    </record>
+    <record id="hospital_patient_form" model="ir.ui.view">
+            <field name="name">hospital.patient.form</field>
+            <field name="model">hospital.patient</field>
+            <field name="arch" type="xml">
+                <form string="Patient">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name" placeholder="e.g. John Doe" required="1"/></h1>
+                        </div>
+                       
+                        <group>
+                            <group>
+                                <field name="attending_doctor" placeholder="attending doctor"/>
+                                <field name="email" />
+                            </group>
+                            <group name="phone_numbers">
+                                <field name="phone" widget="phone" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+    <record id="disease_type_tree" model="ir.ui.view">
+            <field name="name">disease_type.tree</field>
+            <field name="model">disease.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                </tree>
+            </field>
+    </record>
+    <record id="disease_type_form" model="ir.ui.view">
+            <field name="name">disease.type.form</field>
+            <field name="model">disease.type</field>
+            <field name="arch" type="xml">
+                <form string="Disease">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name" placeholder="e.g. Flue" required="1"/></h1>
+                        </div>
+                         <notebook colspan="2">
+                            <page string="Symptoms" name="symptoms">
+                                <field name="symptoms" placeholder="e.g. headache"/>
+                            </page>
+                            <page string="Treatments" name="treatment">
+                                <field name="treatment" placeholder="e.g. Aspirin"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+    <record id="hospital_visit_tree" model="ir.ui.view">
+            <field name="name">hospital.visit.tree</field>
+            <field name="model">hospital.visit</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="state" />
+                    <field name="date" />
+                    <field name="patient_id" />
+                    <field name="doctor_id" />
+                </tree>
+            </field>
+    </record>
+    <record id="hospital_visit_form" model="ir.ui.view">
+            <field name="name">hospital.visit.form</field>
+            <field name="model">hospital.visit</field>
+            <field name="arch" type="xml">
+                <form string="Visit">
+                    <header>
+                        <button name="action_plan" type="object" string="Plan" attrs="{'invisible': [('state', '=', 'plan')]}" />
+                        <button name="action_in_action" type="object" string="In Action" attrs="{'invisible': [('state', '=', 'in_action')]}" />
+                        <button name="action_happen" type="object" string="Happen" attrs="{'invisible': [('state', 'not in', ['plan', 'in_action'])]}" />
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="patient_id" />
+                                <field name="doctor_id" attrs="{'readonly': [('state', '=', 'happen')]}"/>
+                            </group>
+                            <group>
+                                <field name="date"  attrs="{'readonly': [('state', '=', 'happen')]}"/>
+                            </group>
+                        </group>
+                         <notebook colspan="3">
+                            <page string="Complaints" name="complaint">
+                                <field name="complaint" placeholder="e.g. headache"/>
+                            </page>
+                            <page string="Diagnosis" name="diagnosis">
+                                <field name="diagnosis" placeholder="e.g. Diagnosis"/>
+                            </page>
+                            <page string="Treatments" name="treatment">
+                                <field name="treatment" placeholder="e.g. Aspirin"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+    </record>
+
+</odoo>

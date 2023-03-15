@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acl_disease_type,ub_hospital.disease_type_user,model_disease_type,base.group_user,1,1,1,1
+acl_hospital_doctor,ub_hospital.hospital_doctor_user,model_hospital_doctor,base.group_user,1,1,1,1
+acl_hospital_patient,ub_hospital.hospital_patient_user,model_hospital_patient,base.group_user,1,1,1,1
+acl_hospital_visit,ub_hospital.hospital_visit_user,model_hospital_visit,base.group_user,1,1,1,1
+acl_hospital_report,ub_hospital.hospital_report_user,model_hospital_report,base.group_user,1,1,1,1
